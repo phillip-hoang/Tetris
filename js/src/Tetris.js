@@ -129,6 +129,7 @@ define(["src/GameBoard", "src/StatManager", "src/Tetramino", "src/Block", "src/R
 					this.removeRow(i);
 					removed++;
 					this.stat.lines++;
+					i++;
 				}
 			}
 			if (removed > 0) {
