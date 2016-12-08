@@ -10,7 +10,7 @@ require(["src/Game", "src/Tetris"], function(Game, Tetris) {
 		init: function() {
 			canvas.width = 480;
 			canvas.height = 272;
-			canvas.scale = 1;
+			canvas.scale = 2;
 			
 			content.load("back", "res/back.png")
 			content.load("blocks", "res/blocks.png")
