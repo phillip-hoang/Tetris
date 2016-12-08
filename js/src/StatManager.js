@@ -37,7 +37,7 @@ define(function() {
 				}
 			} 
 			else {
-				if(this.lines >= (this.startlvl + 1) * 10 || 100) {
+				if(this.lines >= (this.startlvl + 1) * 10 || this.lines >= 100) {
 					this.firstlvl = true;
 					this.lvl++;
 				}
