@@ -32,12 +32,12 @@ define(function() {
 		},
 		checkLvlUp: function() {
 			if(this._firstlvl) {
-				if(this.lines >= (this.lvl + 1) * 10) {
+				if(this.lines >= this.lvl + 1) {
 					this.lvl++;
 				}
 			} 
 			else {
-				if(this.lines >= (this.startlvl + 1) * 10 || this.lines >= 100) {
+				if(this.lines >= this.startlvl + 1) {
 					this.firstlvl = true;
 					this.lvl++;
 				}
