@@ -116,7 +116,7 @@ define(["src/GameBoard", "src/StatManager", "src/Tetramino", "src/Block", "src/R
 		},
 		checkRows: function() {
 			var full, removed = 0;
-			
+			var clrLineMP3 = new Audio("clearline.mp3");
 			for(var i = this.rows-1; i >= 0 ; i--) {
 				full = true;
 				for (var j = 0; j < this.cols; j++) {
@@ -130,6 +130,7 @@ define(["src/GameBoard", "src/StatManager", "src/Tetramino", "src/Block", "src/R
 					removed++;
 					this.stat.lines++;
 					i++;
+					clrLineMP3.play();
 				}
 			}
 			if (removed > 0) {
