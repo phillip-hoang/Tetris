@@ -81,8 +81,10 @@ define(["src/GameBoard", "src/StatManager", "src/Tetramino", "src/Block", "src/R
 			dr = dr || 1;
 			var bc = this.blockControl,
 				ct = this.currentTetramino;
+				pceRotateMP3 = new Audio("piecerotate.mp3");
 			if (ct.check(bc, 0, 0, dr)) {
 				ct.rotation = ct.getRotation(dr);
+				pceRotateMP3.play();
 			}
 		},
 		moveDown: function() {
@@ -100,17 +102,20 @@ define(["src/GameBoard", "src/StatManager", "src/Tetramino", "src/Block", "src/R
 		hardDrop: function() {
 			var bc = this.blockControl,
 				ct = this.currentTetramino;
+				pceLandMP3 = new Audio("pieceland.mp3");
 				move = true;
 			while(move) {
 			if (ct.check(bc, 0, 1)) {
 				ct.y += 1;
 				this.stat.score += 2;
+				pceLandMP3.play();
 			}
 			else {
 				move = false;
 				ct.setTo(bc);
 				this.checkRows();
 				this.setNextTetramino();
+				pceLandMP3.play();
 				}
 			}
 		},
