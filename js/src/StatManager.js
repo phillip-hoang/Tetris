@@ -31,15 +31,18 @@ define(function() {
 			this.score +=(this.lvl + 1) * p;
 		},
 		checkLvlUp: function() {
+			lvlUpMP3 = new Audio("lvlup.mp3");
 			if(this._firstlvl) {
 				if(this.lines >= this.lvl + 1) {
 					this.lvl++;
+					lvlUpMP3.play();
 				}
 			} 
 			else {
 				if(this.lines >= this.startlvl + 1) {
 					this.firstlvl = true;
 					this.lvl++;
+					lvlUpMP3.play();
 				}
 			}
 		}
