@@ -40,7 +40,7 @@ define(function() {
 			} 
 			else {
 				if(this.lines >= this.startlvl + 1) {
-					this.firstlvl = true;
+					this._firstlvl = true;
 					this.lvl++;
 					lvlUpMP3.play();
 				}
