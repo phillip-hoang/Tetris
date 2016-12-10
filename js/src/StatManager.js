@@ -33,7 +33,7 @@ define(function() {
 		checkLvlUp: function() {
 			lvlUpMP3 = new Audio("lvlup.mp3");
 			if(this._firstlvl) {
-				if(this.lines >= this.lvl + 1) {
+				if(this.lines >= (this.lvl * 10) + 1) {
 					this.lvl++;
 					lvlUpMP3.play();
 				}
